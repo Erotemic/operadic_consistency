@@ -67,7 +67,7 @@ def run_consistency_check(
     substituter: Optional[Substituter] = None,
     context: Optional[str] = None,
     plan_opts: Optional[Mapping[str, Any]] = None,
-    cache: Optional[MutableMapping[str, Any]] = None,
+    cache: Optional[MutableMapping[tuple, str]] = None,
 ) -> ConsistencyReport:
     """
     Run the operadic consistency check on a given ToQ:
