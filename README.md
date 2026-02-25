@@ -49,14 +49,14 @@ Consider:
 
 Evaluation proceeds bottom-up:
 
-- Node 1 -> "1945"
-- Node 2 -> "Harry Truman"
+-   Node 1 → "1945"
+-   Node 2 → "Harry Truman"
 
 Baseline answer: **Harry Truman**
 
 ### Collapse Run 1 (no cuts)
 
-Collapse the entire tree into one question:
+We collapse the entire tree into a single question:
 
 ```text
 (2) Who was President when WW2 ended?
@@ -74,6 +74,8 @@ Keep the leaf separate and collapse the root component:
       (1) When did WW2 end?
 ```
 
+This produces the same structure as the original tree.
+
 Answer: **Harry Truman**
 
 If collapsing changes the root answer, reasoning may be inconsistent.
@@ -89,6 +91,13 @@ Each node:
 - Has a question string
 - May contain placeholders like `[A1]`, `[A2]`
 - Refers to answers of child nodes
+
+Example:
+
+```text
+    When did WW2 end?        (node 1)
+    Who was President at time [A1]?   (node 2, root)
+```
 
 ### OpenToQ
 
