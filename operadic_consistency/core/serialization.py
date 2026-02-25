@@ -24,7 +24,7 @@
 # %%
 from typing import Any, Dict, Mapping
 
-from operadic_consistency.core.toq_types import ToQ, ToQNode, NodeId, OpenToQ
+from operadic_consistency.core.toq_types import ToQ, ToQNode, NodeId
 
 
 # %%
